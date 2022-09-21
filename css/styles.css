@@ -75,10 +75,30 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
-    padding: 17px;
+    padding: 0;
     background-color: blueviolet;
+}
+@media (min-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 17px;
+    }
+}
+
+.my-name {
+    font-family: 'Iceberg', cursive;
+    font-size: 40px;
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .my-name {
+        display: none;
+    }
 }
 
 .sorneria {
@@ -91,9 +111,27 @@ img {
     text-decoration: none;
     color: black;
     margin: 0 10px;
+    display: none;
+}
+@media (min-width: 768px) {
+    .sorneria a {
+        display: unset;
+    }
 }
 
 /* About me */
+
+.cat-image {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .cat-image {
+        display: unset;
+        width: 100%;
+        max-width: 30%;
+    }
+}
 
 .aboutMe-container {
     margin: 50px 25px;
@@ -101,8 +139,14 @@ img {
 
 @media (min-width: 768px) {
     .aboutMe-container {
-        margin: 50px 300px;
+        display: flex;
+        flex-direction: row;
+        margin: 50px 200px;
         line-height: 30px;
+    }
+
+    .info-container {
+        margin-right: 100px;
     }
 }
 
@@ -174,6 +218,7 @@ img {
     gap: 10px 40px;
     place-items: center;
 }
+
 @media(min-width:768px) {
     .container {
         grid-template: repeat(1, 1fr) / repeat(3, 1fr);
@@ -189,14 +234,20 @@ img {
     flex-direction: row;
 } */
 
-.my-skills-information > p {
+.my-skills-information>p {
     font-family: 'Iceberg', cursive;
     font-weight: 900;
     font-size: 2rem;
     display: none;
-    /* transform: rotate(-90deg);
-    display: inherit; */
 }
+/* @media (min-width: 768px) {
+    .my-skills-information>p {
+        display: unset;
+        font-size: 1rem;
+        transform: rotate(0.5turn);
+        display: inherit;
+    }
+} */
 
 .my-skills {
     display: flex;
